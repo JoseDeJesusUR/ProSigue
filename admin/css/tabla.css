@@ -1,0 +1,37 @@
+.scroll{
+	/*max-width: 1000px;*/
+	max-height: 360px;
+	overflow: auto;
+}
+#main-container{
+	margin: 5px auto;
+	width: 100%;
+}
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%; 
+}
+th,td{
+	padding: 5px;
+	
+}
+thead{
+	background-color: rgba(105, 26, 48, 0.945);
+	border-bottom: solid 5px rgb(83, 20, 38);
+	color: white;
+}
+table thead th{
+	text-align: center;
+}
+tr:nth-child(even){
+	background-color: #ddd;
+}
+/*tr:hover td{
+	background-color: rgba(190, 190, 190, 0.9);
+	color: white;
+}
+table td:hover{
+	background: rgba(150, 150, 150, 0.9);
+}*/

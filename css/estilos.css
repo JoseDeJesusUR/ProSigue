@@ -1,0 +1,298 @@
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin:0px;
+	padding:0px;
+}
+.td1{
+	text-align:center;
+}
+h3{
+	text-align: center;
+  }
+body {
+	background:#f2f2f2; 
+	color:#333;
+	font-family:Arial, helvetica, sans-serif;
+}
+.wrapp { /*contenedor del body*/
+	max-width: 90%;
+	width:100%;
+	margin:auto;
+	overflow: hidden;
+}
+.wrappT { /*contenedor de las tablas*/
+	max-width: 1250px;
+	width:100%;
+	margin:auto;
+	overflow: hidden;
+}
+.header{  /* <<< HEADER >>> */
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	text-align: right;
+	padding: 10px;
+	width:85%;
+	margin:auto;
+	overflow: hidden;
+  }
+.titulo{
+	text-align: right;
+  }
+.menu-fixed{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.4);
+}
+	/* 	/HEADER	 */
+.articulo {
+	float: left;
+	width: 100%;
+	padding:3px 0px;
+	text-align: justify;
+}
+  /*--------------------------------*/
+  	/* <<< ENCABEZADO >>> */
+.mensaje { 
+	display: grid;
+	grid-template-columns: auto auto;
+	background:rgba(108, 109, 105, 0.753);
+	padding:10px;
+	color:#fff;
+	margin:7px 0;
+	border-radius:5px;
+}
+.logo {
+	width: 200px;
+	float: left;
+}
+.logo img {
+	width:100%;
+	vertical-align: top;
+}
+textarea{
+	width: 100%;
+	margin-bottom:40px;
+	box-sizing: border-box;
+	border-radius: 7px;
+	min-height: 100px;
+	max-height: 200px;
+	max-width: 100%;
+	}
+input {
+    width: 320px;
+}
+/*--------------------------------*/
+		/* <<< BOTON >>> */
+  .button {
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #246355;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 17px;
+	padding: 10px;
+	width: 180px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+  }
+  .button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+  }
+  .button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+  }
+  .button:hover span {
+	padding-right: 20px;
+  }
+  .button:hover span:after {
+	opacity: 1;
+	right: 0;
+  }
+/*--------------------------------*/
+	/* <<< RADIOBOTON >>> */
+	.container {
+	position: relative;
+		padding-left: 23px;
+		padding-right: 25px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 15px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.container input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+	}
+	.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 18px;
+			width: 18px;
+			background-color: rgb(200, 200, 200);
+			border-radius: 50%;
+	}
+	.container:hover input ~ .checkmark {
+			background-color: #ccc;
+	}
+	.container input:checked ~ .checkmark {
+			background-color: #246355;
+	}
+	.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+	}
+	.container input:checked ~ .checkmark:after {
+			display: block;
+	}
+	.container .checkmark:after {
+		top: 5px;
+		left: 5px;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: white;
+	}
+/*--------------------------------*/
+		/* <<< CHECK BOX >>> */
+.check {
+	display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.check input {
+	position: absolute;
+	opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkB {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(200, 200, 200);
+}
+.check:hover input ~ .checkB {
+    background-color: #ccc;
+}
+.check input:checked ~ .checkB {
+    background-color: #246355;
+}
+.checkB:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.check input:checked ~ .checkB:after {
+    display: block;
+}
+.check .checkB:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*--------------------------------*/
+	/* <<< Combo BOX >>> */
+.custom-select{
+	display: block;
+	min-width: 180px;
+	margin: 0 auto;
+	border: 1px solid #a5a5a5;
+	background-color: rgb(200, 200, 200);
+}
+select{
+	border: none;
+	outline: none;
+	background: transparent;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: block;
+	width: 100%;
+	padding: 5px;
+	font-size: 14px;
+	color: #6b6b6b;
+}
+/*--------------------------------*/
+
+	/* <<< IMAGEN HOME (BOTON)>>> */
+	.modal {
+		display: none;
+		position: fixed; 
+		z-index: 1; 
+		padding-top: 10px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%; 
+		overflow: auto; 
+		background-color: rgb(0,0,0); 
+		background-color: rgba(0,0,0,0.4); 
+	}
+	.modal-content {
+		background-color: #fefefe2d;
+		margin: auto;
+		padding: 30px;
+		border: 1px solid #888;
+		width: 40%;
+	}
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+/*--------------------------------*/
+footer {
+	width: 100%;
+	background:rgba(51, 51, 51, 0.7);
+	padding: 5px 0;
+	color:#fff;
+	bottom: 0;
+	position: fixed;
+}
+footer p {
+	text-align:center;
+	font-size: .8rem;
+}
