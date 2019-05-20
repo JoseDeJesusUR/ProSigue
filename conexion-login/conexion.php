@@ -3,7 +3,7 @@
 $host = "localhost";
 $basededatos = "prosigue";
 $usuario = "root";
-$password = "savemo425200";
+$password = "rootroot";
 $puerto = "3306";
 
 try{

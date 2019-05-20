@@ -4,7 +4,7 @@
 		$do=$_SESSION["ses_nombre_ins"];
 			/*echo "$do";*/
 		
-		$conexion = mysqli_connect("localhost","root","savemo425200","prosigue");
+		$conexion = mysqli_connect("localhost","root","rootroot","prosigue");
 		$query = $conexion->query("SELECT * FROM usuario WHERE do_ins='$do' ");
 
 		echo '<option value="0">Seleccione</option>';

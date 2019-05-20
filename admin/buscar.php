@@ -31,7 +31,7 @@
 <?php
     define('HOST_DB', 'localhost');  
     define('USER_DB', 'root');       
-    define('PASS_DB', 'savemo425200');          
+    define('PASS_DB', 'rootroot');          
     define('NAME_DB', 'prosigue'); 
     function conectar(){
         global $conexion;  
@@ -76,6 +76,7 @@ if($_POST){
                 <th>Grado que cursa cuando se registra</th>
                 <th><!--Editarar--></th>
                 <th><!--Modificar--></th>
+                <th><!--Eliminar--></th>
             </thead>
 
             <?php while($fila = mysql_fetch_assoc($resultado)){ ?>
@@ -88,8 +89,16 @@ if($_POST){
 				<td class="td1"><?php echo $texto = $fila['nivel'] ?>		
 				<td class="td1"><?php echo $texto = $fila["fechaReg"] ?></td>
 				<td class="td1"><?php echo $texto = $fila["GradoReg"] ?></td>
-                <td><button class="button" style="vertical-align:middle" onclick="edit_alumn(<?php echo $texto = $fila['id'] ?>)"><span>Editar</span></button></td>
-				<td><button class="button" style="vertical-align:middle" onclick="modifica(<?php echo $texto = $fila['id'] ?>)"><span>Seguimiento</span></button></td>
+                
+                 <!--td><button class="button" style="vertical-align:middle" onclick="edit_alumn(<?php echo $texto = $fila['id'] ?>)"><span>Editar</span></button></td-->
+                    <td><button class="button" style="vertical-align:middle" onclick="edit_alumn(<?php echo $texto = $fila['id'] ?>)"><span> <i class="icon icon-pencil"></i></span></button></td>
+
+				 <!--td><button class="button" style="vertical-align:middle" onclick="modifica(<?php echo $texto = $fila['id'] ?>)"><span>Seguimiento</span></button></td-->
+                    <td><button class="button" style="vertical-align:middle" onclick="modifica(<?php echo $texto = $fila['id'] ?>)"><span> <i class="icon icon-news "></i></span></button></td>
+
+				 <!--td><button class="button" style="vertical-align:middle" onclick="eliminar(<?php echo $texto = $fila['id'] ?>)"><span>Eliminar</span></button></td-->
+				    <td><button class="button" style="vertical-align:middle" onclick="borrar(<?php echo $texto = $fila['id'] ?>)"><span> <i class="icon icon-remove-user"></i></span></button></td>
+
             </tr>
             <?php } 
 	}else{
@@ -111,7 +120,14 @@ if($_POST){
   } 
   function modifica(x){        
     window.location = "editar_admin.php?idx="+x
-  }       
+  }      
+  function borrar(x){ 
+		var flag = confirm("Esta seguro de que desea borrar?")
+		if (flag){       
+			window.location = "borrar.php?idx="+x
+			document.form_hidden.submit();
+		}
+	} 
 </script> 
 <!--__________________________-->
 			</div><!-- wrapp -->
