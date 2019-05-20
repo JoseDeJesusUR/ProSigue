@@ -41,7 +41,7 @@
 							<li><a href="indicadorN1.php">Estudiantes Prioridad 1</a></li>
 							<li><a href="indicadorN2.php">Estudiantes Prioridad 2</a></li>
 							<li><a href="indicadorN3.php">Estudiantes Prioridad 3</a></li>
-							<!--<li><a href="indicadorN4.php">Estudiantes sin rezago escolar</a>-->
+							<li><a href="indicadorN4.php">Estudiantes sin rezago escolar</a>
 						</ul>
 					</li>
 					<li><a href="nuevo.php"><span><i class="icon icon-news"></i></span>Incorporación de Estudiantes</a></li>

@@ -31,7 +31,7 @@
 <?php
     define('HOST_DB', 'localhost');  
     define('USER_DB', 'root');       
-    define('PASS_DB', 'rootroot');          
+    define('PASS_DB', 'savemo425200');          
     define('NAME_DB', 'prosigue'); 
     function conectar(){
         global $conexion;  

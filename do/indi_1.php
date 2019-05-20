@@ -38,7 +38,7 @@ echo "$do";*/
 $cct=($_POST['paises']);
 //echo $cct;
 	include("../conexion-login/conexion.php");
-		$consulta = "SELECT * FROM alumnos_identificados WHERE cctEsc='$cct' ";
+		$consulta = "SELECT * FROM alumnos_identificados WHERE cctEsc='$cct' ORDER BY cctEsc, apellidoP";
 		$query=$bd->prepare($consulta);
 		$query->execute();
 		$rs = $query->fetchAll();

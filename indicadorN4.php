@@ -26,7 +26,7 @@
 <!--___ -->
 <?php
 	include("conexion-login/conexion.php");
-		$consulta = "SELECT * FROM alumnos_identificados WHERE  zona='$zona_esc'AND condicion_actl='4' OR condicion_actl='5' ORDER BY cctEsc, apellidoP";
+		$consulta = "SELECT * FROM alumnos_identificados WHERE  zona='$zona_esc' AND (condicion_actl='4' OR condicion_actl='5') ORDER BY cctEsc, apellidoP";
 		$query=$bd->prepare($consulta);
 		$query->execute();
 		$rs = $query->fetchAll();

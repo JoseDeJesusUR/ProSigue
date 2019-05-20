@@ -4,31 +4,18 @@
 	include 'plantilla_pdf.php';
 	require 'conexion2.php';
 
-    //$idx = $_GET["idx"];
-	//$query="SELECT * FROM alumnos_identificados WHERE alumnos_identificados.id='$idx'";
-	//$resultado = $mysqli->query($query);
+    $idx = $_GET["idx"];
+	$query="SELECT * FROM alumnos_identificados WHERE alumnos_identificados.id='$idx'";
+	$resultado = $mysqli->query($query);
 
 	$pdf = new PDF('P','mm','A4');
 	$pdf->AliasNbPages();
 	$pdf->AddPage();
-/////////////////////////////////////////////
-$idx = $_GET["idx"];
-$query="SELECT * FROM alumnos_identificados WHERE alumnos_identificados.id='$idx'";
-//$query="SELECT * FROM alumnos_identificados INNER JOIN usuario ON alumnos_identificados.id = usuario.id  WHERE alumnos_identificados.id='$idx'";
-$resultado = $mysqli->query($query);
-$pdf->SetFont ('Arial', '', 10);
-$row = $resultado->fetch_assoc();
-$pdf->Cell(179, 4.5, utf8_decode("Autoridad Educativa Federal en la Ciudad de México"), 0, 1, 'R', 0);
-$pdf->Cell(185, 4.5, utf8_decode("Dirección General de Operación de Servicios Educativos"), 0, 1, 'R', 0);
-$pdf->Cell(173, 4.5, utf8_decode("Coordinación Sectorial de Educación Secundaria"), 0, 1, 'R', 0);
-$pdf->Cell(163, 4.5, utf8_decode("Inspeccíon de Zona Secundaria General " . $row["zona"]), 0, 1, 'R', 0);
-/////////////////////////////////////////////
+
 		$pdf->SetFont ('Arial', 'B', 12);
 		$pdf->Cell(200, 12, 'REPORTE DEL ESTUDIANTE', 0, 1, 'C');
 /////////////////////////////////////////////
-$idx = $_GET["idx"];
-$query="SELECT * FROM alumnos_identificados WHERE alumnos_identificados.id='$idx'";
-$resultado = $mysqli->query($query);
+
 	$pdf->SetFillColor(232, 232, 232);
 
 		$pdf->SetFont ('Arial', 'B', 12);

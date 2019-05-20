@@ -1,6 +1,6 @@
 <?php
 
-	$conexion = mysqli_connect("localhost","root","rootroot","prosigue");
+	$conexion = mysqli_connect("localhost","root","savemo425200","prosigue");
 	$el_continente = $_POST['continente'];
 	$query = $conexion->query("SELECT * FROM escuelas WHERE ze = $el_continente");
 
